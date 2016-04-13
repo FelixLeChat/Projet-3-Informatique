@@ -1,0 +1,23 @@
+﻿@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        var user = User as PrincessPrincipal;
+
+        @Html.AntiForgeryToken()
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="@Url.Action("Index", "Profil",new {id = ""})" title="Voir son profil"><img src="/Content/Images/@(user.Profile.Picture).png" style="max-height: 25px; margin-right: 10px; border-radius: 5px"/>@user.Profile.Username </a>
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Disconnecter</a></li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("S'enregistrer", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Connexion", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+

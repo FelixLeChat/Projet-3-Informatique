@@ -1,0 +1,31 @@
+﻿@using Models
+@model Models.EnumsModel.PrincessAvatar
+    
+@{
+    var avatars =  Enum.GetValues(typeof (EnumsModel.PrincessAvatar)).Cast<object>().Select(v => v.ToString());
+}
+<style>
+    .princessThumbnail.selected {
+        background-color: cornflowerblue;
+    }
+</style>
+@foreach (var avatar in avatars)
+{
+    var styleClass = "princessThumbnail";
+    if (Model.ToString() == avatar)
+    {
+        styleClass += " selected";
+    }
+    <img src="/Content/Images/@(avatar).png" class="img-thumbnail @(styleClass)" style="max-width: 70px" data-value="@avatar"/>
+}
+<input type="hidden" value="@Model.ToString()" id="Avatar" name="Avatar"/>
+
+<script>
+$(document).ready(function() {
+    $(".princessThumbnail").click(function(e) {
+        $(".princessThumbnail").removeClass("selected");
+        $(this).addClass("selected");
+        $("#Avatar").val($(this).data("value"));
+    });
+});
+</script>

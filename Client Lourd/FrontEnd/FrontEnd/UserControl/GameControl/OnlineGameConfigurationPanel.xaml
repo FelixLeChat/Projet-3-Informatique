@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="FrontEnd.UserControl.GameControl.OnlineGameConfigurationPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:partial="clr-namespace:FrontEnd.UserControl.Partial"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda">
+    <Grid Margin="0,0,0,10">
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <partial:OnlineBasicGameConfigPanel Grid.Row="0" x:Name="BasicGameConfig" ChildEvent="HandleChildEvent"></partial:OnlineBasicGameConfigPanel>
+                <ContentPresenter  Grid.Row="1" Name="ZoneSelectionPanel" Margin="0,0,0,10"/>
+
+            </Grid>
+
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Grid.Column="0" Name="BackBtn" MouseLeftButtonDown="BackBtn_Click" Cursor="Hand" MaxWidth="200">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Back_Button.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                    <Rectangle.Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Opacity" Value="1" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Opacity" Value="0.8"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Rectangle.Style>
+                </Rectangle>
+                <Rectangle Grid.Column="2" Name="StartBtn" MouseLeftButtonDown="StartBtn_Click" Cursor="Hand" MaxWidth="200">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/StartGame_Button.png" Stretch="Uniform"/>
+                    </Rectangle.Fill>
+                    <Rectangle.Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Opacity" Value="1" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Opacity" Value="0.8"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Rectangle.Style>
+                </Rectangle>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

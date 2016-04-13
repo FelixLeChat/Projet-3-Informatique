@@ -1,0 +1,107 @@
+﻿<specializedUserControl:ChildControlBase x:Class="FrontEnd.UserControl.Partial.OnlineBasicGameConfigPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:game="clr-namespace:FrontEnd.Game"
+             xmlns:converter="clr-namespace:FrontEnd.UserControl.Converter"
+             xmlns:specializedUserControl="clr-namespace:FrontEnd.UserControl.SpecializedUserControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+
+    <UserControl.Resources>
+        <converter:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter"/>
+        <converter:StringToIntConverter x:Key="StringToIntConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <GroupBox Grid.Row="0" Margin="10,10,10,10" FontSize="16" FontWeight="Bold"
+                  Background="#FFE9EC" BorderBrush="DeepPink" BorderThickness="2" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda">
+                <GroupBox.Header>
+                    Game Name
+                </GroupBox.Header>
+                <TextBox Name="GameNameTxt" Height="25" Text="{Binding GameName}" TextChanged="GameNameTxt_TextChanged"></TextBox>
+            </GroupBox>
+
+            <GroupBox Grid.Row="1" Margin="10,10,10,10" FontSize="16" FontWeight="Bold"
+                  Background="#FFE9EC" BorderBrush="DeepPink" BorderThickness="2" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda">
+                <GroupBox.Header>
+                    Game Protection
+                </GroupBox.Header>
+
+                <StackPanel Orientation="Vertical">
+                    <CheckBox Name="IsPrivate" IsChecked="{Binding IsPrivate}" Content="Is Private" Checked="StateChanged"></CheckBox>
+                    <Label Content="Password:"></Label>
+                    <PasswordBox Name="Password"  Width="Auto" IsEnabled="{Binding ElementName=IsPrivate, Path=IsChecked}" LostFocus="Password_LostFocus" PasswordChanged="Password_LostFocus"></PasswordBox>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+
+        <Grid Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <GroupBox Grid.Row="0" Margin="10,10,10,10" FontSize="16" FontWeight="Bold"
+                  Background="#FFE9EC" BorderBrush="DeepPink" BorderThickness="2" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda">
+                <GroupBox.Header>
+                    Zone Configuration
+                </GroupBox.Header>
+
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton GroupName="ZoneConfig" Content="Partie rapide" 
+                    IsChecked="{Binding ZoneConfig, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:ZoneConfig.SoloMap}}" Checked="ZoneConfig_Checked"/>
+                    <RadioButton GroupName="ZoneConfig" Content="Campagne" 
+                    IsChecked="{Binding ZoneConfig, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:ZoneConfig.MultiMap}}" Checked="ZoneConfig_Checked"/>
+                </StackPanel>
+
+            </GroupBox>
+            <GroupBox Grid.Row="1" Margin="10,10,10,10" FontSize="16" FontWeight="Bold"
+                  Background="#FFE9EC" BorderBrush="DeepPink" BorderThickness="2" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda">
+                <GroupBox.Header>
+                    Multiplayer Game Mode
+                </GroupBox.Header>
+
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton GroupName="MultiMod" Content="Coop" 
+                    IsChecked="{Binding MultiMode, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:MultiMode.Coop}}" Checked="StateChanged"/>
+                    <RadioButton GroupName="MultiMod" Content="Compétition" 
+                    IsChecked="{Binding MultiMode, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:MultiMode.Competition}}" Checked="StateChanged"/>
+                </StackPanel>
+
+            </GroupBox>
+
+            <GroupBox Grid.Row="3" Margin="10,10,10,10" FontSize="16" FontWeight="Bold"
+                  Background="#FFE9EC" BorderBrush="DeepPink" BorderThickness="2" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda" Name="PlayerOptionBox">
+                <GroupBox.Header>
+                    Player Option
+                </GroupBox.Header>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Player Count:"></TextBlock>
+                    <ComboBox Name="PlayerCountComboBox" Margin="10,0,0,0" Loaded="PlayerCountComboBox_Loaded" SelectedItem="{Binding PlayerCount, Converter={StaticResource StringToIntConverter}}" VerticalAlignment="Top" PreviewMouseDown="StateChanged"></ComboBox>
+                </StackPanel>
+
+            </GroupBox>
+        </Grid>
+    </Grid>
+</specializedUserControl:ChildControlBase>
+
+
+

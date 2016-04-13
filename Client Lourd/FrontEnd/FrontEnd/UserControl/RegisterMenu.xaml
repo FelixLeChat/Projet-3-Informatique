@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="FrontEnd.UserControl.RegisterMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FrontEnd.UserControl"
+             xmlns:partial="clr-namespace:FrontEnd.UserControl.Partial"
+             mc:Ignorable="d" 
+             MinHeight="300"
+             d:DesignHeight="300"
+             MinWidth="500"
+             d:DesignWidth="500">
+    <Grid>
+        <Canvas VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Background.png" Stretch="UniformToFill" TileMode="FlipXY"/>
+            </Canvas.Background>
+        </Canvas>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Top Grid Row -->
+            <partial:MainMenuHeader Grid.Row="0"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border BorderBrush="#BB346C" CornerRadius="5" BorderThickness="2" HorizontalAlignment="Stretch" Margin="20,10,0,20"  Background="Transparent" MaxHeight="500" MaxWidth="300">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+
+                        <Rectangle IsHitTestVisible="False" Fill="White" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,5,10"/>
+
+                            <TextBox Grid.Row="1" Name="UsernameEntry" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,5,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="28" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda">
+                            <TextBox.Resources>
+                                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Center">
+                                    <VisualBrush.Visual>
+                                        <TextBox FontStyle="Italic" Text="Nom utilisateur" Foreground="Black" Background="Transparent" BorderBrush="Transparent" FontSize="25.333"/>
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </TextBox.Resources>
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Style.Triggers>
+                                        <Trigger Property="Text" Value="{x:Null}">
+                                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                        </Trigger>
+                                        <Trigger Property="Text" Value="">
+                                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+
+                        <PasswordBox Grid.Row="2" Name="PasswordEntry" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,5,10" LostFocus="PasswordEntry_LostFocus" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PasswordEntry_GotFocus" FontSize="33.333"/>
+                        <PasswordBox Grid.Row="2" Password="Password" Name="PasswordEntryTip" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,5,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Opacity="0.5" GotFocus="PasswordEntryTip_GotFocus" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda"/>
+
+                        <PasswordBox Grid.Row="3" Name="PasswordReentry" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,5,10" LostFocus="PasswordEntry_LostFocus" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PasswordReentry_GotFocus" KeyDown="PasswordReentry_KeyDown" FontSize="33.333"/>
+                        <PasswordBox Grid.Row="3" Password="Password" Name="PasswordReentryTip" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,5,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Opacity="0.5" GotFocus="PasswordReentryTip_GotFocus" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda"/>
+
+                        <Rectangle Grid.Row="4" Name="RegisterButton" Margin="2,5,2,0" MouseLeftButtonUp="RegisterButton_Click" Cursor="Hand">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Register_Button.png" Stretch="Uniform"/>
+                            </Rectangle.Fill>
+                            <Rectangle.Style>
+                                <Style TargetType="Rectangle">
+                                    <Setter Property="Opacity" Value="1" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Opacity" Value="0.8"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Rectangle.Style>
+                        </Rectangle>
+
+                        <Rectangle Grid.Row="5" Name="LogInWithFacebookButton" Margin="2,5,2,2" MouseLeftButtonUp="LogInWithFacebookButton_Click" Cursor="Hand">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/FacebookLogin_button.png" Stretch="Uniform"/>
+                            </Rectangle.Fill>
+                            <Rectangle.Style>
+                                <Style TargetType="Rectangle">
+                                    <Setter Property="Opacity" Value="1" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Opacity" Value="0.8"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Rectangle.Style>
+                        </Rectangle>
+
+                    </Grid>
+                </Border>
+
+                <Image Grid.Column="1" Source="/FrontEnd;component/Ressources/UI_Images/snowwhite_full.gif" Margin="0,0,0,30"></Image>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

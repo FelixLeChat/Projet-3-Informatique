@@ -1,0 +1,1128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D445472D-FD0F-48F4-88CC-8757B39A395E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FrontEnd</RootNamespace>
+    <AssemblyName>FrontEnd</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Exe\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FrontEnd.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Web.Http.Common.4.0.20126.16343\lib\net40\System.Web.Http.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="websocket-sharp, Version=1.0.2.36589, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WebSocketSharp.1.0.3-rc9\lib\websocket-sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Achievements\AchievementManager.cs" />
+    <Compile Include="Core\Event\SpectateGameEvent.cs" />
+    <Compile Include="Core\Event\HostJoiningCreatedGameEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\MatchMakingGameInvitation.cs" />
+    <Compile Include="Core\Event\SessionEvent\MatchMakingSyncEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\MatchMakingSearchingEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\InvitationEvent.cs" />
+    <Compile Include="Core\Event\ReconnectToGameEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\AbstractSessionEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\PlayerForfeitEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\KickPlayerEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\PlayerReadyEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\StartGameEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\EndOnlineGameEvent.cs" />
+    <Compile Include="Core\Event\SessionEvent\TerminateSessionEvent.cs" />
+    <Compile Include="Core\Event\EndGameEvent.cs" />
+    <Compile Include="Game\Config\Helper\GameAchievementHelper.cs" />
+    <Compile Include="Game\Config\Helper\MatchMakingDefaultGame.cs" />
+    <Compile Include="Game\Handler\GeneralOnlineEventHandler.cs" />
+    <Compile Include="Game\Points\PointsManager.cs" />
+    <Compile Include="Helper\ConnectionHelper.cs" />
+    <Compile Include="Helper\FriendInvitationHelper.cs" />
+    <Compile Include="Helper\JoinGameHelper.cs" />
+    <Compile Include="Helper\ReconnectHelper.cs" />
+    <Compile Include="ModelConverter\ObservableCollectionConverter.cs" />
+    <Compile Include="ModelConverter\ProfileModelConverter.cs" />
+    <Compile Include="ModelConverter\ZoneModelConverter.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\ViewModel\ZoneViewModel.cs" />
+    <Compile Include="Model\ViewModel\InviteFriendsViewModel.cs" />
+    <Compile Include="Model\ViewModel\MatchMakingViewModel.cs" />
+    <Compile Include="Model\ViewModel\OnlineFriendViewModel.cs" />
+    <Compile Include="Model\ViewModel\OnlineSession.cs" />
+    <Compile Include="Model\ViewModel\ConnectPrivateGameViewModel.cs" />
+    <Compile Include="Model\ViewModel\GameInvitationViewModel.cs" />
+    <Compile Include="Model\ViewModel\ReconnectViewModel.cs" />
+    <Compile Include="Model\ViewModel\FriendInvitationItem.cs" />
+    <Compile Include="Model\ViewModel\SessionParticipant.cs" />
+    <Compile Include="Helper\ZoneSynchronizer.cs" />
+    <Compile Include="Core\Event\JoinOnlineGameRequestEvent.cs" />
+    <Compile Include="Game\Config\Helper\OnlineConfigHelper.cs" />
+    <Compile Include="Game\Wrap\OnlineGame.cs" />
+    <Compile Include="Helper\EnumToImage.cs" />
+    <Compile Include="Helper\MessageHelper.cs" />
+    <Compile Include="Helper\ZoneHelper.cs" />
+    <Compile Include="ModelConverter\MapModelConverter.cs" />
+    <Compile Include="StateMachine\Core\IGameState.cs" />
+    <Compile Include="StateMachine\State\MatchMakingSearchingState.cs" />
+    <Compile Include="StateMachine\State\MatchMakingHostState.cs" />
+    <Compile Include="StateMachine\State\UserZoneMenuState.cs" />
+    <Compile Include="Stats\DailyManager.cs" />
+    <Compile Include="Stats\ProgressManager.cs" />
+    <Compile Include="Stats\StatsManager.cs" />
+    <Compile Include="UserControl\AchievementControl\AchievementPanel.xaml.cs">
+      <DependentUpon>AchievementPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Converter\InverseBoolToVisibilityConverter.cs" />
+    <Compile Include="UserControl\Converter\InverseBooleanConverter.cs" />
+    <Compile Include="UserControl\Converter\IsOnlineToColorConverter.cs" />
+    <Compile Include="UserControl\Converter\WantedEnumToVisibilityConverter.cs" />
+    <Compile Include="UserControl\Converter\EnumToTitlePicConverter.cs" />
+    <Compile Include="UserControl\Converter\EnumToProfilePicConverter.cs" />
+    <Compile Include="UserControl\Converter\IsItemSelectedConverter.cs" />
+    <Compile Include="UserControl\Converter\InvitationStateToString.cs" />
+    <Compile Include="UserControl\Converter\IsReadyConverter.cs" />
+    <Compile Include="UserControl\DataTemplate\InviteFriendListItem.xaml.cs">
+      <DependentUpon>InviteFriendListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DataTemplate\PlayerListItem.xaml.cs">
+      <DependentUpon>PlayerListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Message\MessageControl.xaml.cs">
+      <DependentUpon>MessageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\WaitingRoom.xaml.cs">
+      <DependentUpon>WaitingRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewModel\Base\DelegateCommand.cs" />
+    <Compile Include="Model\ViewModel\Base\ObservableObject.cs" />
+    <Compile Include="ModelConverter\GameModelConverter.cs" />
+    <Compile Include="Model\ViewModel\GameViewModel.cs" />
+    <Compile Include="Model\ViewModel\MessagePresenter.cs" />
+    <Compile Include="AsyncLoading\Load.cs" />
+    <Compile Include="ChatWindow.xaml.cs">
+      <DependentUpon>ChatWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Enums.cs" />
+    <Compile Include="Core\EventManager.cs" />
+    <Compile Include="Core\Event\ChangeStateEvent.cs" />
+    <Compile Include="Core\Event\IEvent.cs" />
+    <Compile Include="Core\Event\CreateGameRequestEvent.cs" />
+    <Compile Include="Core\Event\UiEvent.cs" />
+    <Compile Include="Game\Config\Helper\ConfigHelper.cs" />
+    <Compile Include="Core\NativeFunction.cs" />
+    <Compile Include="Game\Config\Common\BasicOnlineGameConfig.cs" />
+    <Compile Include="Game\Config\Common\GameConfigEnum.cs" />
+    <Compile Include="Game\Config\Common\BasicOfflineGameConfig.cs" />
+    <Compile Include="Game\Config\Common\IGameConfig.cs" />
+    <Compile Include="Game\Config\Common\MultiMapConfig.cs" />
+    <Compile Include="Game\Config\CampaingGameConfig.cs" />
+    <Compile Include="Game\Config\OnlineGameConfig.cs" />
+    <Compile Include="Game\Config\QuickGameConfig.cs" />
+    <Compile Include="Game\Config\Common\SingleMapConfig.cs" />
+    <Compile Include="Game\Wrap\IGame.cs" />
+    <Compile Include="Game\Wrap\LocalGame.cs" />
+    <Compile Include="Model\Zone.cs" />
+    <Compile Include="Player\Profile.cs" />
+    <Compile Include="Player\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Setting\Options.cs" />
+    <Compile Include="StateMachine\Core\IState.cs" />
+    <Compile Include="StateMachine\Core\StateManager.cs" />
+    <Compile Include="StateMachine\State\OfflineGameState.cs" />
+    <Compile Include="StateMachine\State\GameMenuState.cs" />
+    <Compile Include="StateMachine\State\LoginMenuState.cs" />
+    <Compile Include="StateMachine\State\OnlineGameState.cs" />
+    <Compile Include="StateMachine\State\OptionMenuState.cs" />
+    <Compile Include="StateMachine\State\MainMenuState.cs" />
+    <Compile Include="StateMachine\State\ProfileEditMenuState.cs" />
+    <Compile Include="StateMachine\State\ProfileMenuState.cs" />
+    <Compile Include="StateMachine\State\EditionState.cs" />
+    <Compile Include="StateMachine\State\RegisterMenuState.cs" />
+    <Compile Include="UserControl\Converter\StringToIntConverter.cs" />
+    <Compile Include="UserControl\Converter\RadioButtonCheckedConverter.cs" />
+    <Compile Include="StateMachine\State\UserFriendsState.cs" />
+    <Compile Include="UserControl\CustomInputWindow.xaml.cs">
+      <DependentUpon>CustomInputWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ChatMenu.xaml.cs">
+      <DependentUpon>ChatMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DataTemplate\ZoneListItem.xaml.cs">
+      <DependentUpon>ZoneListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FacebookLoginWindow.xaml.cs">
+      <DependentUpon>FacebookLoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\OnlineBoardPanel.xaml.cs">
+      <DependentUpon>OnlineBoardPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\OnlineMenu.xaml.cs">
+      <DependentUpon>OnlineMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\OnlineGameConfigurationPanel.xaml.cs">
+      <DependentUpon>OnlineGameConfigurationPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Loading\CircularProgressBar.xaml.cs">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Loading\CommandManagerHelper.cs" />
+    <Compile Include="UserControl\Loading\DelegateCommand.cs" />
+    <Compile Include="UserControl\Loading\LoadingPanel.xaml.cs">
+      <DependentUpon>LoadingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LoginMenu.xaml.cs">
+      <DependentUpon>LoginMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\OpenGLPanel.xaml.cs">
+      <DependentUpon>OpenGLPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\OptionMenu.xaml.cs">
+      <DependentUpon>OptionMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Partial\OnlineBasicGameConfigPanel.xaml.cs">
+      <DependentUpon>OnlineBasicGameConfigPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Partial\OfflineBasicGameConfigPanel.xaml.cs">
+      <DependentUpon>OfflineBasicGameConfigPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Partial\LoginHeader.xaml.cs">
+      <DependentUpon>LoginHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Partial\MainMenuHeader.xaml.cs">
+      <DependentUpon>MainMenuHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Partial\MultipleMapSelector.xaml.cs">
+      <DependentUpon>MultipleMapSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Partial\SingleMapSelector.xaml.cs">
+      <DependentUpon>SingleMapSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\OfflineMenu.xaml.cs">
+      <DependentUpon>OfflineMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\GameMenu.xaml.cs">
+      <DependentUpon>GameMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Popup\ConnectToPrivateGame.xaml.cs">
+      <DependentUpon>ConnectToPrivateGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Popup\GameInvitation.xaml.cs">
+      <DependentUpon>GameInvitation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Popup\InviteFriendPopup.xaml.cs">
+      <DependentUpon>InviteFriendPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Popup\MatchMakingPopup.xaml.cs">
+      <DependentUpon>MatchMakingPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Popup\ReconnectToGame.xaml.cs">
+      <DependentUpon>ReconnectToGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProfileEditMenu.xaml.cs">
+      <DependentUpon>ProfileEditMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProfileMenu.xaml.cs">
+      <DependentUpon>ProfileMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\CampaingGameConfigurationPanel.xaml.cs">
+      <DependentUpon>CampaingGameConfigurationPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GameControl\QuickGameConfigurationPanel.xaml.cs">
+      <DependentUpon>QuickGameConfigurationPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\RegisterMenu.xaml.cs">
+      <DependentUpon>RegisterMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CustomRoutedEvent\ZoneConfigChange.cs" />
+    <Compile Include="UserControl\SpecializedUserControl\ChildControlBase.cs" />
+    <Compile Include="UserControl\Tutorial\TutorialHelper.cs" />
+    <Compile Include="UserControl\Tutorial\TutorialWindow.xaml.cs">
+      <DependentUpon>TutorialWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UserFriendsMenu.xaml.cs">
+      <DependentUpon>UserFriendsMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Winform\Enregistrer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\Winform\Enregistrer.Designer.cs">
+      <DependentUpon>Enregistrer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Winform\FinPartieOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\Winform\FinPartieOnline.Designer.cs">
+      <DependentUpon>FinPartieOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Winform\FinPartie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\Winform\FinPartie.Designer.cs">
+      <DependentUpon>FinPartie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Winform\IntegratedOpenGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\Winform\IntegratedOpenGL.Designer.cs">
+      <DependentUpon>IntegratedOpenGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Winform\Proprietes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\Winform\Proprietes.Designer.cs">
+      <DependentUpon>Proprietes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Winform\State\EtatBase.cs" />
+    <Compile Include="UserControl\Winform\State\EtatCreation.cs" />
+    <Compile Include="UserControl\Winform\State\EtatDeplacement.cs" />
+    <Compile Include="UserControl\Winform\State\EtatDuplication.cs" />
+    <Compile Include="UserControl\Winform\State\EtatEchelle.cs" />
+    <Compile Include="UserControl\Winform\State\EtatRotation.cs" />
+    <Compile Include="UserControl\Winform\State\EtatSelection.cs" />
+    <Compile Include="UserControl\Winform\State\EtatTest.cs" />
+    <Compile Include="UserControl\Winform\State\EtatZoom.cs" />
+    <Compile Include="UserControl\ZoneControl\LeaderboardWindow.xaml.cs">
+      <DependentUpon>LeaderboardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ZoneControl\ZoneListWindow.xaml.cs">
+      <DependentUpon>ZoneListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\OnlineEventSubscriber.cs" />
+    <Page Include="ChatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="CustomStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\AchievementControl\AchievementPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\CustomInputWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ChatMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\DataTemplate\InviteFriendListItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\DataTemplate\PlayerListItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\DataTemplate\ZoneListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Message\MessageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\FacebookLoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\GameControl\OnlineBoardPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\GameControl\OnlineMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\GameControl\OnlineGameConfigurationPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\GameControl\WaitingRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Loading\CircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\Loading\LoadingPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\LoginMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\MainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\OpenGLPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\OptionMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\Partial\OnlineBasicGameConfigPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\Partial\OfflineBasicGameConfigPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Partial\LoginHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\Partial\MainMenuHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Partial\MultipleMapSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\Popup\ConnectToPrivateGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Popup\GameInvitation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Popup\InviteFriendPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Popup\MatchMakingPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Popup\ReconnectToGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ProfileEditMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\Partial\SingleMapSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\GameControl\OfflineMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\GameControl\GameMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ProfileMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\GameControl\CampaingGameConfigurationPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\GameControl\QuickGameConfigurationPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\RegisterMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\Tutorial\TutorialWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\UserFriendsMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ZoneControl\LeaderboardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ZoneControl\ZoneListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Winform\Enregistrer.resx">
+      <DependentUpon>Enregistrer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Winform\FinPartieOnline.resx">
+      <DependentUpon>FinPartieOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Winform\FinPartie.resx">
+      <DependentUpon>FinPartie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Winform\IntegratedOpenGL.resx">
+      <DependentUpon>IntegratedOpenGL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Winform\Proprietes.resx">
+      <DependentUpon>Proprietes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Ressources\Font\PaperGirl.ttf" />
+    <Resource Include="Ressources\Font\Proper Princess.ttf" />
+    <Resource Include="Ressources\Font\QuinchoScript_PersonalUse.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Backend\PrincessAPI\FrontEndAccess\FrontEndAccess.csproj">
+      <Project>{ed41b605-b9b2-42a9-9006-6001518558df}</Project>
+      <Name>FrontEndAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Backend\PrincessAPI\Helper\Helper.csproj">
+      <Project>{25c32ad6-b546-46ea-9100-48dd41a1c209}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Backend\PrincessAPI\Models\Models.csproj">
+      <Project>{c6d7d096-6454-4d92-b8f2-b30d1cb87ceb}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\Images\awesome_face_clouds_wallpaper-18498.jpg" />
+    <Resource Include="Ressources\Images\butoirDroit.png" />
+    <Resource Include="Ressources\Images\butoirDroit1.png" />
+    <Resource Include="Ressources\Images\butoirGauche.png" />
+    <Resource Include="Ressources\Images\butoirGauche1.png" />
+    <Resource Include="Ressources\Images\butoirRond.png" />
+    <Resource Include="Ressources\Images\cible.png" />
+    <Resource Include="Ressources\Images\cible1.png" />
+    <Resource Include="Ressources\Images\curseur.png" />
+    <Resource Include="Ressources\Images\deplacement.png" />
+    <Resource Include="Ressources\Images\deplacementBas.png" />
+    <Resource Include="Ressources\Images\duplication.png" />
+    <Resource Include="Ressources\Images\genBille.png" />
+    <Resource Include="Ressources\Images\glissoire-d-hiver-les-glissades-sur-tubes-edelweiss-228802888.jpg" />
+    <Resource Include="Ressources\Images\miseEchelle.png" />
+    <Resource Include="Ressources\Images\mur.png" />
+    <Resource Include="Ressources\Images\paletteD1.png" />
+    <Resource Include="Ressources\Images\paletteD11.png" />
+    <Resource Include="Ressources\Images\paletteD12.png" />
+    <Resource Include="Ressources\Images\paletteD2.png" />
+    <Resource Include="Ressources\Images\paletteD21.png" />
+    <Resource Include="Ressources\Images\paletteD22.png" />
+    <Resource Include="Ressources\Images\paletteG1.png" />
+    <Resource Include="Ressources\Images\paletteG11.png" />
+    <Resource Include="Ressources\Images\paletteG12.png" />
+    <Resource Include="Ressources\Images\paletteG2.png" />
+    <Resource Include="Ressources\Images\paletteG21.png" />
+    <Resource Include="Ressources\Images\paletteG22.png" />
+    <Resource Include="Ressources\Images\portail.png" />
+    <Resource Include="Ressources\Images\ressort.png" />
+    <Resource Include="Ressources\Images\ressort1.png" />
+    <Resource Include="Ressources\Images\rot.png" />
+    <Resource Include="Ressources\Images\rot1.png" />
+    <Resource Include="Ressources\Images\scale.png" />
+    <Resource Include="Ressources\Images\scale1.png" />
+    <Resource Include="Ressources\Images\scale2.png" />
+    <Resource Include="Ressources\Images\selection.png" />
+    <Resource Include="Ressources\Images\trou.png" />
+    <Resource Include="Ressources\Images\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\Images\attention.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\ariel.png" />
+    <Resource Include="Ressources\UI_Images\belle.png" />
+    <Resource Include="Ressources\UI_Images\cinder.png" />
+    <Resource Include="Ressources\UI_Images\frog.png" />
+    <Resource Include="Ressources\UI_Images\mulan.png" />
+    <Resource Include="Ressources\UI_Images\poca.png" />
+    <Resource Include="Ressources\UI_Images\ray.png" />
+    <Resource Include="Ressources\UI_Images\sleep.png" />
+    <Resource Include="Ressources\UI_Images\snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\CrownDuchess.png" />
+    <Resource Include="Ressources\UI_Images\CrownLady.png" />
+    <Resource Include="Ressources\UI_Images\CrownPrincess.png" />
+    <Resource Include="Ressources\UI_Images\CrownQueen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\lock2.png" />
+    <Resource Include="Ressources\UI_Images\unlock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\pink-square-button-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Config_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Editor_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Login_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Play_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Profile_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Register_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Logout_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\EditProfile_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\MainMenu_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\FacebookLogin_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Cancel_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Save_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Add_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Remove_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Back_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Offline_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Online_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Online_Button_Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Jasmine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Achievements\Avatar_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Login_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Achievements\Avatar_L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Achievements\Login_L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Achievements\Achievement_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Achievement_L.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Campain_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Campain_L.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Fast_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Fast_L.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Friend_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Friend_L.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Game_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Game_L.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Map_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Map_L.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Network_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Network_L.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Win_A.png" />
+    <Resource Include="Ressources\UI_Images\Achievements\Win_L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Campain_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Fastgame_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\jasmine_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\ariel_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\cinderella_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\snowwhite_full.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\mulan_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Join_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Host_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Join_Button_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Refresh_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\MyZones_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\StartGame_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Matchmaking_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Matchmaking_Button_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\OnlineGame_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\pocahontas_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\StartGame_Button_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\raiponce_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\belle_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\tiana_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\aurora_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\StartChat_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\FriendProfile_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\FriendProfile_Button_gray.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\StartChat_Button_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Add_Button_gray.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Remove_Button_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Friends_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Default_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\KickPlayer_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Extract_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Maximize_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Minimize_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Send_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Insert_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Extract_Button_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Insert_Button_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\Font\Merienda-Bold.ttf" />
+    <Resource Include="Ressources\Font\Merienda-Regular.ttf" />
+    <None Include="Ressources\Tutoriel\Editeur\Editeurbase.ai" />
+    <None Include="Ressources\UI_Images\Background_tile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButoirTriangleGauche.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChampDeForce.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChampDeForceGris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generateur.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mur.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaletteDroitJ1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaletteDroitJ2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaletteGaucheJ1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaletteGaucheJ2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlateauDArgent.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlateauDArgentGris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ressort.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trou.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButoirCirculaire.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButoirTriangleDroit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PtitCroteJone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Quit_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Reset_tutoriel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Close_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Close_Button2.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Copy_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Delete_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Duplicate_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Move_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Open_Button.png" />
+    <Resource Include="Ressources\UI_Images\Buttons\Selection_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Next_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Previous_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Done_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\Tutoriel\Editeur\1.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\10.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\11.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\12.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\13.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\14.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\15.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\16.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\17.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\18.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\19.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\2.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\20.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\21.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\22.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\23.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\24.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\25.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\26.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\27.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\28.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\29.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\3.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\30.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\31.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\32.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\33.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\34.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\35.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\36.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\37.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\38.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\39.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\4.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\40.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\41.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\42.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\43.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\44.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\45.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\45a.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\46.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\47.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\48.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\49.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\5.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\50.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\6.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\7.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\8.png" />
+    <Resource Include="Ressources\Tutoriel\Editeur\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Achievements\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\MASTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Invite_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Friend_Zone_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Tutorial_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Public_Zone_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\My_Zone_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Leaderboard_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\Tutoriel\Game\101.png" />
+    <Resource Include="Ressources\Tutoriel\Game\102.png" />
+    <Resource Include="Ressources\Tutoriel\Game\103.png" />
+    <Resource Include="Ressources\Tutoriel\Game\104.png" />
+    <Resource Include="Ressources\Tutoriel\Game\105.png" />
+    <Resource Include="Ressources\Tutoriel\Game\106.png" />
+    <Resource Include="Ressources\Tutoriel\Game\107.png" />
+    <Resource Include="Ressources\Tutoriel\Game\108.png" />
+    <Resource Include="Ressources\Tutoriel\Game\109.png" />
+    <Resource Include="Ressources\Tutoriel\Game\110.png" />
+    <Resource Include="Ressources\Tutoriel\Game\111.png" />
+    <Resource Include="Ressources\Tutoriel\Game\112.png" />
+    <Resource Include="Ressources\Tutoriel\Game\113.png" />
+    <Resource Include="Ressources\Tutoriel\Game\114.png" />
+    <Resource Include="Ressources\Tutoriel\Game\115.png" />
+    <Resource Include="Ressources\Tutoriel\Game\116.png" />
+    <Resource Include="Ressources\Tutoriel\Game\117.png" />
+    <Resource Include="Ressources\Tutoriel\Game\118.png" />
+    <Resource Include="Ressources\Tutoriel\Game\119.png" />
+    <Resource Include="Ressources\Tutoriel\Game\120.png" />
+    <Resource Include="Ressources\Tutoriel\Game\121.png" />
+    <Resource Include="Ressources\Tutoriel\Game\122.png" />
+    <Resource Include="Ressources\Tutoriel\Game\123.png" />
+    <Resource Include="Ressources\Tutoriel\Game\124.png" />
+    <Resource Include="Ressources\Tutoriel\Game\125.png" />
+    <Resource Include="Ressources\Tutoriel\Game\126.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Check_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Reconnect_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\Tutoriel\Game\109a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Invite_Friends_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Bal_Research_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Create_Account_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Cupidon_Help_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Join_Bal_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\UI_Images\Buttons\Profile_Button_gray.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

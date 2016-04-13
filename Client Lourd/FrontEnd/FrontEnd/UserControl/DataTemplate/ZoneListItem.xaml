@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="FrontEnd.UserControl.DataTemplate.ZoneListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto">
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="Bool2Visibility" />
+        <Color x:Key="Pink1">#FFFF719C</Color>
+        <Color x:Key="Pink2">#FFFF2789</Color>
+    </UserControl.Resources>
+
+    <Border BorderThickness="2,2,2,2" 
+                    CornerRadius="5,5,5,5" 
+                    HorizontalAlignment="Stretch" Opacity="0.75">
+        <Border.BorderBrush>
+            <SolidColorBrush Color="{DynamicResource Pink2}"/>
+        </Border.BorderBrush>
+        <Border.Background>
+            <SolidColorBrush Color="{DynamicResource Pink1}"/>
+        </Border.Background>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" >
+                <Grid  Width="100" Height="60" Margin="5">
+                    <Image x:Name="Img" Source="{Binding Path=ImagePath}"/>
+                    <TextBlock x:Name="Txt" Text="Chargement..." FontWeight="Bold"
+                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                               Visibility="{Binding IsLoading, Converter={StaticResource Bool2Visibility}}" Foreground="AliceBlue" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda"/>
+
+                </Grid>
+
+                <Label Content="Nom:" VerticalAlignment="Center" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda"/>
+                <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                                             Text="{Binding Path=Name}" TextWrapping="Wrap" Margin="5" Padding="5" BorderBrush="{x:Null}" IsEnabled="false"/>
+                <Label Content="Niveau:" VerticalAlignment="Center" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda"></Label>
+                <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                                             Text="{Binding Path=Level}" TextWrapping="Wrap" Margin="5" Padding="5" BorderBrush="{x:Null}" IsEnabled="false"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+
+
+
+</UserControl>

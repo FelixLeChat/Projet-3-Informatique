@@ -1,0 +1,41 @@
+﻿@model List<Models.Database.BasicUserInfo>
+
+@{
+    ViewBag.Title = "PLB - Home";
+    var user = User as PrincessPrincipal;
+}
+
+<h2>Liste des invitées</h2>
+<table class="table table-hover">
+    @foreach (var basicUserInfo in Model)
+    {
+        <tr>
+            <td style="cursor: pointer;" class="col-sm-10" onclick='window.location = "@Url.Action("Index", "Profil", new {id = basicUserInfo.HashId})"'>
+                <span >@basicUserInfo.Username</span>
+            </td>
+            @if (user != null)
+            {
+                <td>
+                    @if (user.Profile.UserHashId != basicUserInfo.HashId)
+                    {
+                        if (basicUserInfo.AreFriend)
+                        {
+                            <a class="btn btn-danger pull-left" href="@Url.Action("EnleverAmi", "Profil", new {id = basicUserInfo.HashId, username = basicUserInfo.Username})">
+                                Enlever ami
+                            </a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-success pull-left" href="@Url.Action("AjouterAmi", "Profil", new {id = basicUserInfo.HashId, username = basicUserInfo.Username})">
+                                Ajouter ami
+                            </a>
+                        }
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+
+

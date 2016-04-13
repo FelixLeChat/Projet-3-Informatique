@@ -1,0 +1,37 @@
+﻿@model PrincessAPI.Models.Site.EditProfileModel
+
+@{
+    ViewBag.Title = "Modifier le profil";
+}
+
+<h2>Modifier votre profile</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label class="control-label col-md-2">Description</label>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Est privé</label>
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.CheckBoxFor(m => m.IsPrivate)
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Avatar</label>
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Avatar)
+        </div>
+    </div>
+
+    <button class="btn btn-success">Enregistrer</button>
+    <a class="btn btn-danger" href="@Url.Action("Index")">Annuler</a>
+    <a class="btn btn-danger pull-right" onclick="if (confirm('Êtes-vous certain?')){window.location = '@Url.Action("Delete")';}">Supprimer </a>
+    Html.EndForm();
+}

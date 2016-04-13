@@ -1,0 +1,40 @@
+﻿
+@using Models
+@using Newtonsoft.Json
+@model Models.Database.ProfileModel
+
+@{
+    var achievements = JsonConvert.DeserializeObject<Dictionary<EnumsModel.Achievement, bool>>(Model.AchievementsString);
+}
+
+@helper Achievement(bool isAchieved, string imageBase, string altText)
+{
+var path = "/Content/Images/Achievements/" +imageBase + "_";
+    if (isAchieved)
+    {
+        path = path + "A.png";
+    }
+    else
+    {
+        path = path + "L.png";
+    }
+    <img src="@path" title="@altText" class="img-achievement"/>
+}
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Succès
+    </div>
+    <div class="panel-body">
+        @Achievement(achievements[EnumsModel.Achievement.FirstTimeConnect], "Login", "Se connecter")
+        @Achievement(achievements[EnumsModel.Achievement.AddAvatar], "Avatar", "Modifier son apparence")
+        @Achievement(achievements[EnumsModel.Achievement.FastGamePoints], "Fast", "Gagne beaucoup de points rapidement")
+        @Achievement(achievements[EnumsModel.Achievement.GamePoints], "Game", "Faire des points dans une partie")
+        @Achievement(achievements[EnumsModel.Achievement.FirstOnlineGame], "Network", "Joueur une partie en ligne")
+        @Achievement(achievements[EnumsModel.Achievement.FirstMapCreated], "Map", "Créer une zone de jeur")
+        @Achievement(achievements[EnumsModel.Achievement.FirstOnlineGameWon], "Win", "Gagner une  partie en ligne")
+        @Achievement(achievements[EnumsModel.Achievement.PlayWithAFriend], "Friend", "Jouer avec un ami")
+        @Achievement(achievements[EnumsModel.Achievement.FinishCampain], "Campain", "Finir une campagne")
+        @Achievement(achievements[EnumsModel.Achievement.FinishOtherSucess], "Achievement", "Obtenir tout les autres succes")
+    </div>
+</div>
+

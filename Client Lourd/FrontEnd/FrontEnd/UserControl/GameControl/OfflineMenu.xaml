@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="FrontEnd.UserControl.OfflineMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FrontEnd.UserControl"
+             xmlns:partial="clr-namespace:FrontEnd.UserControl.Partial"
+             mc:Ignorable="d" 
+             MinHeight="300"
+             d:DesignHeight="300"
+             MinWidth="500"
+             d:DesignWidth="500">
+    <Grid>
+        <Canvas VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Background.png" Stretch="UniformToFill" TileMode="FlipXY"/>
+            </Canvas.Background>
+        </Canvas>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="6*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <partial:LoginHeader Grid.Row="0"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#BB346C" CornerRadius="5" BorderThickness="2" HorizontalAlignment="Stretch" Margin="20,10,0,10" MaxHeight="400" MaxWidth="200" Background="#4CFFFFFF">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Rectangle Grid.Row="1" Name="BtnQuickGame" Margin="5,5,5,5" MouseLeftButtonDown="BtnQuickGame_Click" Cursor="Hand">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Fastgame_button.png" Stretch="Uniform"/>
+                            </Rectangle.Fill>
+                            <Rectangle.Style>
+                                <Style TargetType="Rectangle">
+                                    <Setter Property="Opacity" Value="1" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Opacity" Value="0.8"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Rectangle.Style>
+                        </Rectangle>
+                        <Rectangle Grid.Row="2" Name="BtnCampaing"  Margin="5,5,5,5" MouseLeftButtonDown="BtnCampaing_Click" Cursor="Hand">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Campain_Button.png" Stretch="Uniform"/>
+                            </Rectangle.Fill>
+                            <Rectangle.Style>
+                                <Style TargetType="Rectangle">
+                                    <Setter Property="Opacity" Value="1" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Opacity" Value="0.8"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Rectangle.Style>
+                        </Rectangle>
+                        <Rectangle Grid.Row="3" Name="BtnBackPlayMenu"  Margin="5,5,5,5" MouseLeftButtonDown="BtnBackPlayMenu_OnClick" Cursor="Hand">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Back_Button.png" Stretch="Uniform"/>
+                            </Rectangle.Fill>
+                            <Rectangle.Style>
+                                <Style TargetType="Rectangle">
+                                    <Setter Property="Opacity" Value="1" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Opacity" Value="0.8"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Rectangle.Style>
+                        </Rectangle>
+                    </Grid>
+                </Border>
+            
+                <Image Grid.Column="1" Source="/FrontEnd;component/Ressources/UI_Images/ariel_full.png"></Image>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

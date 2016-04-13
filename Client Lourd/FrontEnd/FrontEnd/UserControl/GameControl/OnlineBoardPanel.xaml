@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="FrontEnd.UserControl.GameControl.OnlineBoardPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="459.566" d:DesignWidth="566.301">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Row="0" >
+
+            <Rectangle Name="RefreshBtn" MouseLeftButtonDown="RefreshBtn_OnClick" Cursor="Hand" MaxWidth="200" Height="60" Margin="0,0,15,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="130">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Refresh_Button.png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Opacity" Value="1" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+
+        </Grid>
+
+        <!--See http://www.wpftutorial.net/datagrid.html for more details-->
+        <DataGrid Background="#FF719C" RowHeaderWidth="0" Foreground="#FF719C" Grid.Row="1" Name="Table" Margin="0,15,0,15"  CanUserSortColumns="True" IsReadOnly="True" AutoGeneratingColumn="Table_OnAutoGeneratingColumn" SelectionMode="Single" SelectionChanged="Table_SelectionChanged" FontSize="18.667" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda" ColumnWidth="*" RowBackground="White" AreRowDetailsFrozen="True" BorderBrush="#FFFF1F87" BorderThickness="2">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#FFFF1F87"/>
+            </DataGrid.Resources>
+        </DataGrid>
+
+        <Grid Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Grid.Column="0" Name="BackBtn" Width="150" Height="60" MouseLeftButtonDown="BackBtn_OnClick" Cursor="Hand">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Back_Button.png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Opacity" Value="1" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+            <Rectangle Grid.Column="1" Name="HostBtn" Width="150" Height="60" MouseLeftButtonDown="HostBtn_OnClick" Cursor="Hand">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Host_Button.png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Opacity" Value="1" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+            <Rectangle Grid.Column="2" Name="JoinBtn" Width="150" Height="60" MouseLeftButtonDown="JoinBtn_OnClick" Cursor="Hand">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Join_Button.png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Opacity" Value="1" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+            <Rectangle Grid.Column="2" Name="JoinBtnGray" Width="150" Height="60">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Join_Button_gray.png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+
+            <Rectangle Grid.Column="2"  Name="SpectateBtn" Height="60" Width="150"  MouseLeftButtonDown="SpectateBtn_OnClick" Visibility="Hidden" Cursor="Hand">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Check_Button.png"/>
+                </Rectangle.Fill>
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Opacity" Value="1" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+            <Rectangle Grid.Column="2"  Name="ReconnectBtn" Height="60" Width="150" MouseLeftButtonDown="JoinBtn_OnClick" Visibility="Hidden" Cursor="Hand">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/FrontEnd;component/Ressources/UI_Images/Buttons/Reconnect_Button.png"/>
+                </Rectangle.Fill>
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+                        <Setter Property="Opacity" Value="1" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Rectangle.Style>
+            </Rectangle>
+
+        </Grid>
+    </Grid>
+</UserControl>

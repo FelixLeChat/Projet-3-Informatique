@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Application\FacadeModele.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface\FacadeInterfaceNative.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\ArbreRendu.cpp">
+      <Filter>Arbre</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\ArbreRenduINF2990.cpp">
+      <Filter>Arbre</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\QuadTree.cpp">
+      <Filter>Arbre</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurDeplacement.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurMiseAEchelle.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurReinit.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurRotation.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudAbstrait.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudBille.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudButoirCirculaire.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudButoirTriangulaireDroit.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudButoirTriangulaireGauche.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudCible.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudComposite.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudGenerateurBille.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudMur.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudPortail.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudRessort.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudTrou.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudZoneDeJeu.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\Palette\NoeudPaletteGaucheJ2.cpp">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\Palette\NoeudPalette.cpp">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\Palette\NoeudPaletteDroit.cpp">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\Palette\NoeudPaletteDroitJ1.cpp">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\Palette\NoeudPaletteDroitJ2.cpp">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\Palette\NoeudPaletteGauche.cpp">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\Palette\NoeudPaletteGaucheJ1.cpp">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration\Config.cpp">
+      <Filter>Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration\ConfigScene.cpp">
+      <Filter>Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\IEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\EventManager.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\KeyPressEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\TimeEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic\ZoneDeJeu.cpp">
+      <Filter>GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="Partie\PartieCampagne.cpp">
+      <Filter>GameLogic\Partie</Filter>
+    </ClCompile>
+    <ClCompile Include="Partie\PartieRapide.cpp">
+      <Filter>GameLogic\Partie</Filter>
+    </ClCompile>
+    <ClCompile Include="Sons\ClasseSons.cpp">
+      <Filter>Son</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\ArbreRenduTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\BancTests.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\ConfigSceneTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\ProjectionOrthoTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\UtilitaireTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\VisiteursTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\NoeudAbstraitTest.cpp">
+      <Filter>Test\Noeuds</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\NoeudCompositeTest.cpp">
+      <Filter>Test\Noeuds</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\NoeudMurTest.cpp">
+      <Filter>Test\Noeuds</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\NoeudPortailTest.cpp">
+      <Filter>Test\Noeuds</Filter>
+    </ClCompile>
+    <ClCompile Include="Reseau\NetworkManager.cpp">
+      <Filter>Resau</Filter>
+    </ClCompile>
+    <ClCompile Include="Reseau\SocketProxy.cpp">
+      <Filter>Resau</Filter>
+    </ClCompile>
+    <ClCompile Include="Affichage\Affichage.cpp">
+      <Filter>Affichage</Filter>
+    </ClCompile>
+    <ClCompile Include="Editeur\Editeur.cpp">
+      <Filter>Editeur</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueurs\IJoueur.cpp">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueurs\JoueurHumain.cpp">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClCompile>
+    <ClCompile Include="Partie\PartieBase.cpp">
+      <Filter>GameLogic\Partie</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\CollisionEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurObtenirControles.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueurs\JoueurEnLigne.cpp">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudChampForce.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\PowerUp\NoeudPowerUp.cpp">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\NoeudFleche.cpp">
+      <Filter>Arbre\Noeud</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueurs\JoueurBot.cpp">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueurs\JoueurManagerEnLigne.cpp">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueurs\JoueurManagerLocal.cpp">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\PowerUp\NoeudPlateauDArgent.cpp">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\PowerUp\NoeudPowerUpGrossissementBille.cpp">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\PowerUp\NoeudPowerUpGrossissementPalette.cpp">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\PowerUp\NoeudPowerUpDoublePoint.cpp">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Noeuds\PowerUp\NoeudPowerUpDemiPoint.cpp">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Partie\PartieRapideCompetitive.cpp">
+      <Filter>GameLogic\Partie</Filter>
+    </ClCompile>
+    <ClCompile Include="Partie\PartieRapideCompetitive.cpp">
+      <Filter>GameLogic\Partie</Filter>
+    </ClCompile>
+    <ClCompile Include="Partie\PartieCampagneCompetitive.cpp">
+      <Filter>GameLogic\Partie</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\PowerUpPaletteEvent.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurNiveauCarte.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\BallSync.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\BallLostEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\CibleSyncEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\ScoreSyncEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\PowerUpSyncEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\PlayerActionReceiveEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\NewBallEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\PaletteScaleSyncEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\BallScaleSyncEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\DisconnectEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\SyncAllEvent.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\SyncAllRequest.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurPositionButoirs.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurCiblesDetruites.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Arbre\Visiteur\VisiteurPowerUpVisibles.cpp">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\PaletteStateSync.cpp">
+      <Filter>Event\Sync</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\FacadeModele.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\FacadeInterfaceNative.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\ArbreRendu.h">
+      <Filter>Arbre</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\ArbreRenduINF2990.h">
+      <Filter>Arbre</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\QuadTree.h">
+      <Filter>Arbre</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurAbstrait.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurDeplacement.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurMiseAEchelle.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurReinit.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurRotation.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudZoneDeJeu.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeud.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudBille.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudButoirCirculaire.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudButoirTriangulaireDroit.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudButoirTriangulaireGauche.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudCible.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudGenerateurBille.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudMur.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPaletteDroitJ1.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPaletteDroitJ2.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPaletteGaucheJ1.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPaletteGaucheJ2.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPortail.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudRessort.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudTrou.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudAbstrait.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudBille.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudButoirCirculaire.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudButoirTriangulaireDroit.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudButoirTriangulaireGauche.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudCible.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudComposite.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudGenerateurBille.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudMur.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudPortail.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudRessort.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudTrou.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudZoneDeJeu.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\Palette\NoeudPaletteGaucheJ2.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\Palette\NoeudPalette.h">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\Palette\NoeudPaletteDroit.h">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\Palette\NoeudPaletteDroitJ1.h">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\Palette\NoeudPaletteDroitJ2.h">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\Palette\NoeudPaletteGauche.h">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\Palette\NoeudPaletteGaucheJ1.h">
+      <Filter>Arbre\Noeud\Palettes</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration\Config.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration\ConfigScene.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\IEventSubscriber.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\IEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\EventManager.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\KeyPressEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\TimeEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\ZoneDeJeu.h">
+      <Filter>GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Partie\PartieCampagne.h">
+      <Filter>GameLogic\Partie</Filter>
+    </ClInclude>
+    <ClInclude Include="Partie\PartieRapide.h">
+      <Filter>GameLogic\Partie</Filter>
+    </ClInclude>
+    <ClInclude Include="Sons\ClasseSons.h">
+      <Filter>Son</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\ArbreRenduTest.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\BancTests.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\ConfigSceneTest.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\ProjectionOrthoTest.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\UtilitaireTest.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\VisiteursTest.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\NoeudAbstraitTest.h">
+      <Filter>Test\Noeuds</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\NoeudCompositeTest.h">
+      <Filter>Test\Noeuds</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\NoeudMurTest.h">
+      <Filter>Test\Noeuds</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\NoeudPortailTest.h">
+      <Filter>Test\Noeuds</Filter>
+    </ClInclude>
+    <ClInclude Include="Reseau\NetworkManager.h">
+      <Filter>Resau</Filter>
+    </ClInclude>
+    <ClInclude Include="Reseau\SocketProxy.h">
+      <Filter>Resau</Filter>
+    </ClInclude>
+    <ClInclude Include="Affichage\Affichage.h">
+      <Filter>Affichage</Filter>
+    </ClInclude>
+    <ClInclude Include="Editeur\Editeur.h">
+      <Filter>Editeur</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueurs\IJoueur.h">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueurs\JoueurHumain.h">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurObtenirControles.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Partie\PartieBase.h">
+      <Filter>GameLogic\Partie</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\CollisionEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueurs\JoueurEnLigne.h">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\GameStartEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\PowerUp\NoeudPowerUp.h">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudChampForce.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudChampForce.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\NoeudFleche.h">
+      <Filter>Arbre\Noeud</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueurs\IJoueurManager.h">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueurs\JoueurBot.h">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueurs\JoueurManagerEnLigne.h">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueurs\JoueurManagerLocal.h">
+      <Filter>GameLogic\Joueurs</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPlateauDArgent.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\PowerUp\NoeudPlateauDArgent.h">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\PowerUp\NoeudPowerUpGrossissementBille.h">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\PowerUp\NoeudPowerUpGrossissementPalette.h">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\PowerUp\NoeudPowerUpDoublePoint.h">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Noeuds\PowerUp\NoeudPowerUpDemiPoint.h">
+      <Filter>Arbre\Noeud\PowerUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPowerUpGrossissementBille.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPowerUpDemiPoint.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPowerUpDoublePoint.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Usines\UsineNoeudPowerUpGrossissementPalette.h">
+      <Filter>Arbre\Usine</Filter>
+    </ClInclude>
+    <ClInclude Include="Partie\PartieRapideCompetitive.h">
+      <Filter>GameLogic\Partie</Filter>
+    </ClInclude>
+    <ClInclude Include="Partie\PartieRapideCompetitive.h">
+      <Filter>GameLogic\Partie</Filter>
+    </ClInclude>
+    <ClInclude Include="Partie\PartieCampagneCompetitive.h">
+      <Filter>GameLogic\Partie</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\PowerUpPaletteEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurNiveauCarte.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\BallSync.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\BallLostEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\CibleSyncEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\ScoreSyncEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\PowerUpSyncEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\PlayerActionReceiveEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\NewBallEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\PaletteScaleSyncEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\BallScaleSyncEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\DisconnectEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\SyncAllEvent.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\SyncAllRequest.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurPositionButoirs.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurCiblesDetruites.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbre\Visiteur\VisiteurPowerUpVisibles.h">
+      <Filter>Arbre\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\PaletteStateSync.h">
+      <Filter>Event\Sync</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{df871e5b-012c-4272-ad4d-c69e684c0306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arbre">
+      <UniqueIdentifier>{b7e1a95b-7d16-43f9-a91a-1270fa4db30c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arbre\Noeud">
+      <UniqueIdentifier>{3fa78917-7840-47ff-a078-fc85cbac60af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arbre\Usine">
+      <UniqueIdentifier>{54ff7d8b-d167-4f61-bd96-43db5dd958cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arbre\Visiteur">
+      <UniqueIdentifier>{51cd599b-d3f4-4dc2-a0c2-4251a330acd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arbre\Noeud\Palettes">
+      <UniqueIdentifier>{eda2c047-13ab-40ea-961d-8d7c3bcdb53b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration">
+      <UniqueIdentifier>{267ff194-cf9d-4ae3-b7db-5c7e3c74aa6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic">
+      <UniqueIdentifier>{441524c8-8526-4195-8ec8-40a12145fa79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Son">
+      <UniqueIdentifier>{0368fca0-916e-46c8-a802-4bbd1e79e9e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Partie">
+      <UniqueIdentifier>{783f58df-f58b-4b7e-a5e3-5e94cc830867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{d6c0a99b-d297-415b-9a6c-686836ec2617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test\Noeuds">
+      <UniqueIdentifier>{87748972-76d4-4af7-8d09-0b5e173ced13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resau">
+      <UniqueIdentifier>{81dc2330-ca67-4294-8cd3-1e5ad7008157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Affichage">
+      <UniqueIdentifier>{a4bd1807-78d9-47cd-8412-7910cfc2cf1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editeur">
+      <UniqueIdentifier>{d3dce9a9-5ac1-4a1d-b8d1-fecdef9ce32d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Joueurs">
+      <UniqueIdentifier>{bd7cfb9e-1fa4-4bdf-b44b-40ba72df5691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arbre\Noeud\PowerUp">
+      <UniqueIdentifier>{2b8f6561-bcaa-44b9-bfb4-42b49ae121d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{5269d9a5-29e4-4485-aea7-10e2ba9f304a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event\Sync">
+      <UniqueIdentifier>{ef5906f5-e0a4-4552-9a90-22e8c3c62e9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="..\..\Exe\Nuanceurs\nuanceurFragments.glsl">
+      <Filter>Affichage</Filter>
+    </None>
+    <None Include="..\..\Exe\Nuanceurs\nuanceurSommets.glsl">
+      <Filter>Affichage</Filter>
+    </None>
+  </ItemGroup>
+</Project>

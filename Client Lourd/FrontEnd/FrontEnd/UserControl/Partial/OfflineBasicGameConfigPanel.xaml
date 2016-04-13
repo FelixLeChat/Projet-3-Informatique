@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="FrontEnd.UserControl.Partial.OfflineBasicGameConfigPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:game="clr-namespace:FrontEnd.Game"
+             xmlns:converter="clr-namespace:FrontEnd.UserControl.Converter"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <converter:RadioButtonCheckedConverter x:Key="RadioButtonCheckedConverter"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <GroupBox Grid.Row="0" Margin="10,10,10,10" FontSize="16" FontWeight="Bold"
+                  Background="#FFE9EC" BorderBrush="DeepPink" BorderThickness="2" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda">
+            <GroupBox.Header>
+                Player Count
+            </GroupBox.Header>
+
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="PlayerCount" Content="Solo" 
+                    IsChecked="{Binding PlayerCount, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:PlayerCountMode.Solo}}" Checked="PlayerCount_Checked"/>
+                <RadioButton GroupName="PlayerCount" Content="Coop" 
+                    IsChecked="{Binding PlayerCount, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:PlayerCountMode.Coop}}" Checked="PlayerCount_Checked"/>
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Grid.Row="1" Margin="10,10,10,10" FontSize="16" FontWeight="Bold" FontFamily="/FrontEnd;component/Ressources/Font/#Merienda"
+                  Background="#FFE9EC" BorderBrush="DeepPink" BorderThickness="2" Name="PlayerTypeGroupBox">
+            <GroupBox.Header>
+                Second Player Type
+            </GroupBox.Header>
+
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="PlayerType" Content="Human" 
+                    IsChecked="{Binding PlayerTypes, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:PlayerType.Human}}"/>
+                <RadioButton GroupName="PlayerType" Content="Computer" 
+                    IsChecked="{Binding PlayerTypes, Converter={StaticResource RadioButtonCheckedConverter}, 
+                        ConverterParameter={x:Static game:PlayerType.Computer}}"/>
+            </StackPanel>
+
+        </GroupBox>
+    </Grid>
+</UserControl>

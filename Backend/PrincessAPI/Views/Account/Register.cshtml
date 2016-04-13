@@ -1,0 +1,61 @@
+﻿@using Microsoft.Ajax.Utilities
+@model PrincessAPI.Models.Site.RegisterViewModel
+
+@{
+    ViewBag.Title = "S'enregistrer";
+}
+
+<h2>S'enregistrer</h2>
+
+@if (!Model.ErrorMessage.IsNullOrWhiteSpace())
+{
+    <div class="alert alert-warning" role="alert">@Model.ErrorMessage</div>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Username, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Username)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PasswordCopy, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.PasswordCopy, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PasswordCopy)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RememberMe, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.CheckBoxFor(model => model.RememberMe)
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="S'enregistrer" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
